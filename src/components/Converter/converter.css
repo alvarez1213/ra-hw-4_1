@@ -1,0 +1,30 @@
+#converter-form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#converter-input {
+    font-size: 16px;
+    letter-spacing: 1px;
+
+    text-align: center;
+    padding: 0;
+
+    height: 28px;
+    width: 150px;
+}
+
+#converter-output {
+    background-color: rgba(0,0,0,0.5);
+    color: #fff;
+    font-size: 16px;
+
+    text-align: center;
+    padding-top: 8px;
+    margin-top: 4px;
+
+    height: 30px;
+    width: 153px;
+}
