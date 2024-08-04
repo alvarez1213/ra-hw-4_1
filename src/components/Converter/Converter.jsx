@@ -24,7 +24,15 @@ export class Converter extends Component {
     const r = parseInt(colorInHex.slice(1, 3), 16);
     const g = parseInt(colorInHex.slice(3, 5), 16);
     const b = parseInt(colorInHex.slice(5, 7), 16);
-    if (!colorInHex.startsWith("#") || isNaN(r) || isNaN(g) || isNaN(b)) {
+    let Reg_Exp = /^#[0-9A-F]{6}$/i;
+    if (
+      !colorInHex.startsWith("#")
+      || isNaN(r)
+      || isNaN(g)
+      || isNaN(b)
+      || !Reg_Exp.test(colorInHex)
+      || colorInHex.length > 7
+    ) {
       this.setState({
         colorInRGB: "Ошибка!",
       });
